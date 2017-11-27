@@ -51,6 +51,10 @@ public class Main {
         String session = serviceInstance.getServerConnection().getSessionStr();
         System.out.println("Session: " + session);
 
+        // Now print the vsphere version
+        String version = serviceInstance.getServiceContent().getAbout().getVersion();
+        System.out.println("vSphere Version: " + version);
+
         // Now lets log off.
         System.out.println("Logging off.");
         serviceInstance.getServerConnection().logout();
